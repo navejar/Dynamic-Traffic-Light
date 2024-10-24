@@ -35,7 +35,7 @@ def fetch_data(url, limit):
               break
             time.sleep(1)  # Optional: Sleep to avoid hitting rate limits
 
-        except requests.exceptions.RequestException as e:
+        except requests.exceptions.RequestException as e: 
             logging.error(f"Error during request to {url}: {str(e)}")
             break
 
@@ -87,7 +87,6 @@ if __name__ == "__main__":
     
     if not df.empty:
         logging.info("Data extracted successfully!")
-        
         
         # Filter out rows with negative values
         filtered_df = filter_negative_values(clean_data(df))
